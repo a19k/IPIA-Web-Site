@@ -1,0 +1,53 @@
+body{
+    max-width: 40%;
+    height: 100vh;
+    margin:auto auto auto auto;
+    background: linear-gradient(135deg,rgba(64, 255, 0, 0.7) 0%, rgba(140, 0, 0, 0.7) 100%);
+    display: flex;
+    flex-container: column;
+    justify-content: center;
+}
+
+.content {
+	background-color: white;
+	margin:auto;
+	padding: 2rem 5rem 2rem 5rem;
+	padding-bottom: 2rem;
+}
+
+table,tr,td{
+    border-width:1px;
+    border-style:solid;
+    border-color:black;
+    border-collapse:collapse;
+}
+
+td{
+    text-align:center;
+    padding:5px;
+}
+
+
+button{
+    width: 10rem;
+    text-align:center;
+    text-style:bold;
+    color:white;
+    font-size:16px;
+    background-color:black;
+    padding: 10px;
+    margin-left:35%;
+    margin-top:2em;
+    border-width:0px;
+    border-radius:3px;
+}
+
+button:hover {
+	background-color: #2a2a2a;
+	cursor: pointer;
+}
+
+h1,table{
+    margin:auto auto auto auto;
+    text-align:center;
+}

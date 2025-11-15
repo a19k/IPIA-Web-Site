@@ -1,7 +1,8 @@
-html
-{
-    
-    background: #7b7775;
+:root {
+	--primaryColor : #345AAA;
+	--lightBG : #FFFFFF;
+	--darkBG: #1F1F1F;
+	--complementaryColor : #FEBC3A;
 }
 
 body
@@ -27,30 +28,43 @@ header, article
 
 nav
 {
-    background-color: #c30f10;
-    padding:
-   
+    background-color: var(--primaryColor);
+    padding: 1rem 0px; 
+    border-radius: 3px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-between;
 }
 
 nav a, nav a:hover, nav a:visited, nav a:active
-
 {
+    border-left: 3px solid var(--complementaryColor);
+    border-radius: 2px;
     color:white;
     padding:10px 20px;
-    display:inline-block;
+    display: inline-block;
     text-transform:uppercase;
 }
 
 nav a
-{
-    
+{    
     text-decoration: none;
 }
 
 nav a:hover
 {
-    
-    text-decoration: underline;
+	background-color: #16429F;
+}
+
+nav a:active {
+	background-color: var(--complementaryColor);
+	color: #484645;
+	border-left: 3px solid var(--primaryColor);	
+}
+
+nav a:inactive {
+	background-color: var(--complementaryColor);
 }
 
 nav ul
@@ -61,19 +75,18 @@ nav ul
 
 nav ul li
 {
-    
     display:inline-block;
 }
 
 a, a:hover, a:visited, a:active
 {
-    color: #c30f10;
+    color: var(--primaryColor);
     font-weight:bold;
 }
 
 h2, h3
 {
-    color: #c30f10;
+    color: var(--primaryColor);
 }
 
 article
@@ -81,7 +94,7 @@ article
     padding :20px 40px;
     box-sizing: border-box;
     
-    border-bottom: 2px solid #c00000;
+    border-bottom: 2px solid var(--primaryColor);
     min-height:600px;
 }
 
@@ -115,8 +128,8 @@ td, th
 
 th
 {
-    color:#6d6c6c;
-    background-color: #f7dcdc;
+    color:#f1f1f1;
+    background-color: var(--primaryColor);
     height:30px;
 }
 
@@ -174,7 +187,7 @@ input[type=checkbox]
 
 button
 {
-    background-color: #c30f10;
+    background-color: var(--primaryColor);
     color:white;
     font-weight:bold;
     border:none;
@@ -193,5 +206,5 @@ textarea{
 }
 
 #required-label{
-	color: #c30f10;
+	color: var(--primaryColor);
 }
