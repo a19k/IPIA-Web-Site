@@ -1,6 +1,7 @@
 <!DOCTYPE html>
     <head>
         <link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
     </head>
     <body>
     	<h1 class="heading">K V I Z</h1>
@@ -9,39 +10,43 @@
     	<form action="">
     		<div class="question">
 			<h3 name="q1" >1. Šta je skraćenica HTML?</h3>
-	        	<label for="q1r1"><input type="radio" name = "q1" id = "q1r1">HyperText Markup Language</label>
-            		<label for="q1r2"><input type="radio" name = "q1" id = "q1r2">HighText Markdown Language</label>
-           		<label for="q1r3"><input type="radio" name = "q1" id = "q1r3">HyperText Makeup Language</label>
+	        	<label for="a1"><input type="radio" name = "q1" id = "a1">HyperText Markup Language</label>
+            		<label for="b1"><input type="radio" name = "q1" id = "b1">HighText Markdown Language</label>
+           		<label for="c1"><input type="radio" name = "q1" id = "c1">HyperText Makeup Language</label>
     		</div>
     		<div class="question" name="q2">
     			<h3 name="q2">2. Koje se oznake koriste za izradu popisa u HTML?</h3>
-			<label for="q2r1"><input type="checkbox" name="q2" id="q2r1">&ltul&gt</label>
-    			<label for="q2r2"><input type="checkbox" name="q2" id="q2r2">&ltol&gt</label>
-    			<label for="q2r3"><input type="checkbox" name="q2" id="q2r3">&ltli&gt</label>
-    			<label for="q2r4"><input type="checkbox" name="q2" id="q2r4">&ltbr&gt</label>
+			<label for="a2"><input type="checkbox" name="q2" id="a2">&ltul&gt</label>
+    			<label for="b2"><input type="checkbox" name="q2" id="b2">&ltol&gt</label>
+    			<label for="c2"><input type="checkbox" name="q2" id="c2">&ltli&gt</label>
+    			<label for="d2"><input type="checkbox" name="q2" id="d2">&ltbr&gt</label>
     		</div>
     		<div class="question" name ="q3">
     			<h3>3. Koja se oznaka koristi za umetanje slika?</h3>
-    			<label for="q3r1"><input type="radio" name="q3" id="q3r1">&ltimage&gt</label>
-    			<label for="q3r2"><input type="radio" name="q3" id="q3r2">&ltimg&gt</label>
-    			<label for="q3r3"><input type="radio" name="q3" id="q3r3">&ltsrc&gt</label>
+    			<label for="a3"><input type="radio" name="q3" id="a3">&ltimage&gt</label>
+    			<label for="b3"><input type="radio" name="q3" id="b3">&ltimg&gt</label>
+    			<label for="c3"><input type="radio" name="q3" id="c3">&ltsrc&gt</label>
     		</div>
     		<div class="question" name="q4">
     			<h3>4. Koji od sljedećih su valjani HTML atributi?</h3>
-    			<label for="q4r1"><input type="checkbox" name="q4" id="q4r1">href</label>
-    			<label for="q4r2"><input type="checkbox" name="q4" id="q4r2">src</label>
-    			<label for="q4r3"><input type="checkbox" name="q4" id="q4r3">bold</label>
-    			<label for="q4r4"><input type="checkbox" name="q4" id="q4r4">alt</label>
+    			<label for="a4"><input type="checkbox" name="q4" id="a4">href</label>
+    			<label for="b4"><input type="checkbox" name="q4" id="b4">src</label>
+    			<label for="c4"><input type="checkbox" name="q4" id="c4">bold</label>
+    			<label for="d4"><input type="checkbox" name="q4" id="d4">alt</label>
     		</div>
     		<div class="question" name="q5">
     			<h3>5. Koji je ispravan način za stvaranje linkova u HTML-u?</h3>
-    			<label for="q5r1"><input type="radio" name="q5" id="q5r1">&lta url="example.com"&gtClick&lt/a&gt</label>
-    			<label for="q5r2"><input type="radio" name="q5" id="q5r2">&lta href="example.com"&gtClick&lt/a&gt</label>
-    			<label for="q5r3"><input type="radio" name="q5" id="q5r3">&ltlink&gtClick&lt/a&gt</label>
+    			<label for="a5"><input type="radio" name="q5" id="a5">&lta url="example.com"&gtClick&lt/a&gt</label>
+    			<label for="b5"><input type="radio" name="q5" id="b5">&lta href="example.com"&gtClick&lt/a&gt</label>
+    			<label for="c5"><input type="radio" name="q5" id="c5">&ltlink&gtClick&lt/a&gt</label>
     		</div>
     	</form>
-
-	<button type="button">Provjerite odgovore</button>
+	
+	<div class="buttons">
+		<button type="button" onclick="checkAnswers()">Provjerite odgovore</button>
+		<button type="button" onclick="reset()">Pokušaj ponovo</button>
+	</div>
+	<p id="result">?</p>
 	<footer>
 	   <p>Created by Karić Anis | Web programiranje</p>
 	</footer>
