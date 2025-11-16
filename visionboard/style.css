@@ -2,7 +2,7 @@
 body {
 margin: 0;
 font-family: "Segoe UI", Tahoma, sans-serif;
-background: #e3d7b4;
+background: #027D45;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -12,13 +12,13 @@ overflow: hidden;
 
 h1 {
 margin-top: 15px;
-color: #4b382a;
+color: #;
 text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 /* Stiliziranje alatne trake */
 .toolbar {
-background: rgba(255, 255, 255, 0.9);
+background: #06A45C;
 padding: 10px 20px;
 border-radius: 12px;
 box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -30,8 +30,8 @@ z-index: 2;
 }
 
 button {
-background: #8b5e3c;
-color: white;
+background: #B53303;
+color: #eeeeee;
 border: none;
 border-radius: 8px;
 padding: 8px 12px;
@@ -40,8 +40,9 @@ cursor: pointer;
 transition: background 0.2s;
 }
 
-button:hover {
-background: #70472b;
+button img {
+	width: 2rem;
+	height: 2rem;
 }
 
 /* Podrucje pluto ploce */
@@ -49,7 +50,7 @@ background: #70472b;
 position: relative;
 width: 90%;
 flex-grow: 1;
-background: url('pluto.png'); /* tekstura pluta
+background: #72D6A9; /* tekstura pluta
 */
 background-size: cover;
 border-radius: 12px;
@@ -69,12 +70,12 @@ transition: transform 0.1s ease;
 }
 
 /* Paleta boja ljepljivih biljeski */
-.note.color1 { background: #fdfd96; }
-.note.color2 { background: #ffb6b9; }
-.note.color3 { background: #c6f1e7; }
-.note.color4 { background: #f6d6ad; }
-.note.color5 { background: #d4a5a5; }
-.note.color6 { background: #b5ead7; }
+.note.color1 { background: #FE6F3A; }
+.note.color2 { background: #FEA93A; }
+.note.color3 { background: #2D72A3; }
+.note.color4 { background: #E2336B; }
+.note.color5 { background: #06A45C; }
+.note.color6 { background: #6D55C0; }
 
 /* Podrucje za biljeske koje se moze uredjivati */
 .note[contenteditable="true"] {
@@ -82,13 +83,14 @@ outline: none;
 min-width: 100px;
 min-height: 60px;
 font-size: 14px;
+text-decoration: none;
 }
 
 /* Stil citata */
 .quote {
 font-family: "Georgia", serif;
 color: #4b382a;
-background: #fff5e6;
+background: #FF8A5E;
 font-style: italic;
 text-align: center;
 width: 200px;
@@ -102,7 +104,7 @@ border-radius: 8px;
 }
 footer {
 font-size: 13px;
-color: #5b4636;
+color: white;
 margin: 10px;
 }
 
@@ -111,17 +113,20 @@ margin: 10px;
 position: absolute;
 top: 2px;
 right: 6px;
-background: none;
+width: 40px;
+height: 40px;
+padding: 0;
+text-align: center;
+background: #1f1f1f;
 border: none;
 color: #b30000;
-font-size: 18px;
+font-size: 24px;
 font-weight: bold;
 cursor: pointer;
 opacity: 0;
 z-index: 1000;
 transition: opacity 0.2s ease, color 0.2s ease,
 transform 0.1s ease;
-text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
 }
 
 /* Pokazi X prilikom hovera misa */
@@ -135,19 +140,16 @@ opacity: 1;
 .pinned-img .delete-btn:hover {
 color: #ff0000;
 transform: scale(1.15);
-background:transparent !important;
 }
 
 .note .delete-btn:hover {
 color: #ff0000;
 transform: scale(1.15);
-background:transparent !important;
 }
 
 .quote .delete-btn:hover {
 color: #ff0000;
 transform: scale(1.15);
-background:transparent !important;
 }
 
 .note a {

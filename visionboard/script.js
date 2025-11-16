@@ -31,7 +31,7 @@ function makeDraggable(el) {
 
   // Kreiranje delete (X) button
   const delBtn = document.createElement("button");
-  delBtn.textContent = "Briši";
+  delBtn.textContent = "x";
   delBtn.className = "delete-btn";
   el.appendChild(delBtn);
 
