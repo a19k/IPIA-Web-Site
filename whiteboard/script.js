@@ -69,7 +69,8 @@ colorPicker.addEventListener("input", () => {
 
 eraserBtn.addEventListener("click", () => {
 	isErasing = !isErasing;
-	eraserBtn.textContext = isErasing ? "Piši" : "Briši";
+	if(isErasing) eraserBtn.style.backgroundColor = "salmon";
+	else eraserBtn.style.backgroundColor = "pink";
 });
 
 clearBtn.addEventListener("click", () => {
