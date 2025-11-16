@@ -5,6 +5,7 @@ const ctx = canvas.getContext("2d");
 const colorPicker = document.getElementById("colorPicker");
 const brushSize = document.getElementById("brushSize");
 const clearBtn = document.getElementById("clearBtn");
+const printBtn = document.getElementById("printBtn");
 const saveBtn = document.getElementById("saveBtn");
 const eraserBtn = document.getElementById("eraserBtn");
 
@@ -75,13 +76,34 @@ eraserBtn.addEventListener("click", () => {
 
 clearBtn.addEventListener("click", () => {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	localStorage.removeItem("savedCanvasData");
 });
 
-saveBtn.addEventListener("click", () => {
+printBtn.addEventListener("click", () => {
 	const image = canvas.toDataURL("image/png");
 	const link = document.createElement("a");
 	link.href = image;
 	link.download = "moj_crtez.png";
 	link.click();
 });
+
+saveBtn.addEventListener("click", () => {
+	const dataURL = canvas.toDataURL('image/png');
+	localStorage.setItem('savedCanvasData', dataURL);
+});
+
+function load(){
+	const savedDataURL = localStorage.getItem('savedCanvasData');
+
+	if (savedDataURL) {
+        const img = new Image();
+        img.onload = function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear existing content
+            ctx.drawImage(img, 0, 0);
+        };
+        img.src = savedDataURL;
+    }
+}
+
+load();
 
